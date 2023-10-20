@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header class="container mt-3">
+        <nav class="container">
+            <a href="#" aria-current="page">Mortgage Calculator</a>
+            <a href="future_deposits.html">Future One Time Deposits</a>
+            <a href="present_value.html">Present Value of Ordinary Annuity</a>
+        </nav>
+    </header>
+
+    <main class="container p-5">
+
+        <div class="container" id="mortgage-calculator">
+            <h1>Mortgage Calculator</h1>
+            <p>Calculate how much a monthly payment for a loan would be.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-m-12">
+                <form id="mortgage-form">
+                    <label for="principal">Principal:</label>
+                    <input type="text" id="principal" required />
+                    <label for="interest-rate">Interest Rate:</label>
+                    <input type="text" id="Interest Rate" required />
+                    <label for="loan-length">Loan Length:</label>
+                    <input type="text" id="loan-length" required />
+                </form>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center">
+            <p class="ms-2">Monthly Payment: $0.00</p>
+            <p class="ms-2">Interest Rate: $0.00</p>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
