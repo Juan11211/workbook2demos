@@ -1,7 +1,7 @@
 // Given data
-const numberOfPeople = 50; // Replace with the actual number of people on the tour
+const numberOfPeople = 50; 
 const passengersPerVan = 15;
-const costPerVanPerDay = 250; // Cost to rent a van per day
+const costPerVanPerDay = 250; 
 
 // Calculate the number of vans required
 const numberOfVans = Math.ceil(numberOfPeople / passengersPerVan);
