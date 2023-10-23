@@ -8,44 +8,102 @@
 </head>
 <body>
     <header class="container mt-3">
-        <nav class="container">
-            <a href="#" aria-current="page">Mortgage Calculator</a>
-            <a href="future_deposits.html">Future One Time Deposits</a>
-            <a href="present_value.html">Present Value of Ordinary Annuity</a>
-        </nav>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Finacial Calculator</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Mortgage</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="future_deposits.html">CD</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="present_value.html">Annuity</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="temp.html">Temp</a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
     </header>
 
     <main class="container p-5">
 
         <div class="container" id="mortgage-calculator">
             <h1>Mortgage Calculator</h1>
-            <p>Calculate how much a monthly payment for a loan would be.</p>
+            <p>How much monthly payment for a loan would be</p>
         </div>
 
         <div class="container text-center">
-
             <div class="row m-3">
-                <div class="col-m-12">
-                    <form id="mortgage-form" >
-                        <label class="" for="principal">Principal:</label>
-                        <input type="number" id="principal" required />
-                        <label for="interest-rate">Interest Rate:</label>
-                        <input type="number" id="interest-rate" required />
-                        <label for="loan-length">Loan Length:</label>
-                        <input type="number" id="loan-length" required />
+                <div class="col-lg-4">
+                    <form id="principal-form">
+                        <div class="form-group">
+                            <label for="principal">Principal:</label>
+                            <input type="number" class="form-control" id="principal" required>
+                        </div>
+                    </form>
+                </div>
+        
+                <div class="col-lg-4">
+                    <form id="interest-form">
+                        <div class="form-group">
+                            <label for="interestRate">Interest Rate:</label>
+                            <input type="number" class="form-control" id="interestRate" required>
+                        </div>
+                    </form>
+                </div>
+        
+                <div class="col-lg-4">
+                    <form id="loan-form">
+                        <div class="form-group">
+                            <label for="loanLength">Loan Length:</label>
+                            <input type="number" class="form-control" id="loanLength" required>
+                        </div>
                     </form>
                 </div>
             </div>
-    
-        
-            <label for="monthlyPay" class="ms-2">Monthly Payment:</label>
-            <input type="number" class="" readonly placeholder="$0.00"/>
-            <label for="interest-rate" class="ms-2">Interest Rate:</label>
-            <input type="number" class="" readonly placeholder="$0.00" />
         </div>
+        
+        
+            <div class="text-center">
+                <button class="btn btn-dark" id="calculateBtn" type="submit">Calculate</button>
+            </div>
 
+          
+
+            <div class="container text-center">
+                <div class="row m-3">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="expectedPay">Expected Pay:</label>
+                            <input type="text" class="form-control" id="expectedPay" readonly>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="interestPaid">Total Interest Paid:</label>
+                            <input type="text" class="form-control" id="interestPaid" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+        </div>
     </main>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
