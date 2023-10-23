@@ -22,22 +22,26 @@
             <p>Calculate how much a monthly payment for a loan would be.</p>
         </div>
 
-        <div class="row">
-            <div class="col-m-12">
-                <form id="mortgage-form">
-                    <label for="principal">Principal:</label>
-                    <input type="text" id="principal" required />
-                    <label for="interest-rate">Interest Rate:</label>
-                    <input type="text" id="Interest Rate" required />
-                    <label for="loan-length">Loan Length:</label>
-                    <input type="text" id="loan-length" required />
-                </form>
-            </div>
-        </div>
+        <div class="container text-center">
 
-        <div class="container d-flex justify-content-center">
-            <p class="ms-2">Monthly Payment: $0.00</p>
-            <p class="ms-2">Interest Rate: $0.00</p>
+            <div class="row m-3">
+                <div class="col-m-12">
+                    <form id="mortgage-form" >
+                        <label class="" for="principal">Principal:</label>
+                        <input type="number" id="principal" required />
+                        <label for="interest-rate">Interest Rate:</label>
+                        <input type="number" id="interest-rate" required />
+                        <label for="loan-length">Loan Length:</label>
+                        <input type="number" id="loan-length" required />
+                    </form>
+                </div>
+            </div>
+    
+        
+            <label for="monthlyPay" class="ms-2">Monthly Payment:</label>
+            <input type="number" class="" readonly placeholder="$0.00"/>
+            <label for="interest-rate" class="ms-2">Interest Rate:</label>
+            <input type="number" class="" readonly placeholder="$0.00" />
         </div>
 
     </main>
