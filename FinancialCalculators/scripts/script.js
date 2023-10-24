@@ -1,25 +1,22 @@
-"use strict"
+"use strict";
 
-window.onload = init; 
+window.onload = init;
 
-function init(){
-    
-    // first we give value to the button
+function init() {
+    // Assign click handlers to the buttons
     let calculateBtn = document.getElementById("calculateBtn");
     calculateBtn.onclick = calculateBtnClicked;
-
 }
 
-function calculateBtnClicked(){
-    // input values
+function calculateBtnClicked() {
+    // Input values
     let principal = document.getElementById("principal");
     let interestRate = document.getElementById("interestRate");
     let loanLength = document.getElementById("loanLength");
     let expectedPay = document.getElementById("expectedPay");
     let interestPaid = document.getElementById("interestPaid");
 
-    // calculate code
-
+    // Calculate code
     let inputPrincipal = Number(principal.value);
     let inputInterestRate = Number(interestRate.value);
     let inputLoanLength = Number(loanLength.value);
@@ -28,13 +25,11 @@ function calculateBtnClicked(){
     let loanLengthMonths = inputLoanLength * 12;
 
     let monthlyPayment = (inputPrincipal * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -loanLengthMonths));
-
     monthlyPayment = monthlyPayment.toFixed(2);
 
     let totalAmount = (monthlyPayment * loanLengthMonths) - inputPrincipal;
 
-    // display value
-
+    // Display values
     expectedPay.value = monthlyPayment;
     interestPaid.value = totalAmount;
 }
