@@ -14,10 +14,12 @@ function futureBtnClicked() {
     let deposit = document.getElementById("deposit");
     let interestRate = document.getElementById("interestRate");
     let years = document.getElementById("years");
+    let futureValueElement = document.getElementById("futureValue");
+    let interestEarnedElement = document.getElementById("interestEarned");
 
     // Get input values
     let depositValue = Number(deposit.value);
-    let interestRateValue = Number(interestRate.value);
+    let interestRateValue = Number(interestRate.value) / 100; // Convert to decimal
     let yearsValue = Number(years.value);
 
     // Calculate the daily interest rate
@@ -29,10 +31,8 @@ function futureBtnClicked() {
     // Calculate the total interest earned
     let totalInterest = futureValue - depositValue;
 
-    // Set the value property of input elements
-    let futureValueElement = document.getElementById("futureValue");
-    let interestEarnedElement = document.getElementById("interestEarned");
-
+    // Set the input values as plain text
     futureValueElement.value = futureValue.toFixed(2);
     interestEarnedElement.value = totalInterest.toFixed(2);
 }
+
